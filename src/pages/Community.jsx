@@ -8,16 +8,16 @@ export default function Community() {
     if (containerRef.current && !containerRef.current.querySelector('giscus-widget')) {
       const script = document.createElement('script');
       script.src = 'https://giscus.app/client.js';
-      script.setAttribute('data-repo', 'USERNAME/REPO');       // TODO: Replace with your repo
-      script.setAttribute('data-repo-id', 'R_kgDOXXXXX');      // TODO: Replace with your repo-id
-      script.setAttribute('data-category', 'Announcements');    // TODO: Replace with your category
-      script.setAttribute('data-category-id', 'DIC_kwDOXXXXX');// TODO: Replace with your category-id
+      script.setAttribute('data-repo', 'xinyuan-fxy/UK-Study-Abroad-Guide-');
+      script.setAttribute('data-repo-id', 'R_kgDOTwXBZQ');
+      script.setAttribute('data-category', 'General');
+      script.setAttribute('data-category-id', 'DIC_kwDOTwXBZc4DBFjf');
       script.setAttribute('data-mapping', 'pathname');
       script.setAttribute('data-strict', '0');
       script.setAttribute('data-reactions-enabled', '1');
       script.setAttribute('data-emit-metadata', '0');
       script.setAttribute('data-input-position', 'bottom');
-      script.setAttribute('data-theme', 'light');
+      script.setAttribute('data-theme', 'preferred_color_scheme');
       script.setAttribute('data-lang', 'zh-CN');
       script.setAttribute('crossorigin', 'anonymous');
       script.async = true;
@@ -65,12 +65,7 @@ export default function Community() {
       {/* Giscus Comments */}
       <div className="bg-white rounded-xl border border-border p-6">
         <h2 className="text-xl font-semibold mb-4">💭 留言讨论</h2>
-        <div ref={containerRef} className="min-h-[200px]">
-          <p className="text-sm text-text-secondary text-center py-8">
-            💡 留言功能通过 GitHub Discussions 驱动。<br />
-            配置你的 GitHub 仓库信息后即可启用。
-          </p>
-        </div>
+        <div ref={containerRef} className="min-h-[200px]" />
       </div>
     </div>
   );
