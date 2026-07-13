@@ -13,9 +13,8 @@ export default function Header() {
   return (
     <header className="bg-white border-b border-border sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 text-primary font-bold text-lg no-underline">
-          <span className="text-2xl">🇬🇧</span>
-          <span>英国留学指南</span>
+        <Link to="/" className="text-primary font-bold text-lg no-underline">
+          原心咯的英国留学指南
         </Link>
         <nav className="flex items-center gap-1">
           {navLinks.map((link) => (

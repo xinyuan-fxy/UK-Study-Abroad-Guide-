@@ -20,10 +20,7 @@ export default function Home() {
   return (
     <div>
       <section className="bg-gradient-to-br from-primary to-primary-light text-white py-16 px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-3">🇬🇧 英国留学指南</h1>
-        <p className="text-lg text-blue-100 max-w-xl mx-auto mb-6">
-          25年 Fall 入学，一站式留学生活手册。开源共创。
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">英国留学指南</h1>
         <Link
           to="/guide"
           className="inline-block bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors no-underline"
