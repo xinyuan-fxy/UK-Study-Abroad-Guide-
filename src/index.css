@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e3a5f;
+  --color-primary-light: #2a5298;
+  --color-accent: #e94e3c;
+  --color-accent-light: #f26b5e;
+  --color-bg-light: #f8f9fa;
+  --color-bg-card: #ffffff;
+  --color-text-main: #1a1a2e;
+  --color-text-secondary: #4a5568;
+  --color-border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Markdown content styles */
+.prose h1 { @apply text-3xl font-bold mt-8 mb-4 text-primary; }
+.prose h2 { @apply text-2xl font-semibold mt-6 mb-3 text-primary-light; }
+.prose h3 { @apply text-xl font-semibold mt-5 mb-2; }
+.prose p { @apply my-3 leading-relaxed text-text-secondary; }
+.prose ul { @apply list-disc pl-6 my-3 space-y-1; }
+.prose ol { @apply list-decimal pl-6 my-3 space-y-1; }
+.prose li { @apply text-text-secondary; }
+.prose a { @apply text-accent underline hover:text-accent-light; }
+.prose blockquote { @apply border-l-4 border-primary-light pl-4 my-4 italic bg-bg-light py-2 rounded-r; }
+.prose code { @apply bg-gray-100 text-accent px-1.5 py-0.5 rounded text-sm font-mono; }
+.prose pre { @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4; }
+.prose pre code { @apply bg-transparent text-gray-100 p-0; }
+.prose table { @apply w-full border-collapse my-4; }
+.prose th { @apply border border-border bg-bg-light px-4 py-2 text-left font-semibold; }
+.prose td { @apply border border-border px-4 py-2; }
+.prose img { @apply max-w-full rounded-lg my-4; }
+.prose hr { @apply my-8 border-border; }
