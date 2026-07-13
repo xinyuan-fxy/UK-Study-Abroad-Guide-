@@ -1,16 +1,16 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 
 const topics = [
-  { emoji: '🎓', title: '新生问答', desc: '选校、行前准备、签证问题交流', link: '/guide/pre-departure' },
-  { emoji: '🏠', title: '租房找室友', desc: '找房经验、合租信息、合同避坑', link: '/guide/accommodation' },
-  { emoji: '🍜', title: '吃喝玩乐', desc: '美食推荐、旅行攻略、周末去处', link: '/guide/food-shopping' },
-  { emoji: '💼', title: '求职实习', desc: 'PSW签证、兼职机会、简历建议', link: '/guide/part-time-work' },
+  { emoji: '🎓', title: '新生问答', desc: '选校、行前准备、签证问题——来聊聊' },
+  { emoji: '🏠', title: '租房找室友', desc: '找房经验、合租信息、合同避坑' },
+  { emoji: '🍜', title: '吃喝玩乐', desc: '美食推荐、旅行攻略、周末去处' },
+  { emoji: '💼', title: '求职实习', desc: 'PSW签证、兼职机会、简历建议' },
 ];
 
 export default function Community() {
   const containerRef = useRef(null);
 
+  useEffect(() => { document.title = '交流社区 - 原心咯的英国留学指南'; }, []);
   useEffect(() => {
     if (containerRef.current && !containerRef.current.querySelector('giscus-widget')) {
       const script = document.createElement('script');
@@ -50,19 +50,19 @@ export default function Community() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         {topics.map((topic) => (
-          <Link
+          <a
             key={topic.title}
-            to={topic.link}
-            className="bg-white rounded-xl border border-border p-5 hover:shadow-md hover:border-primary/30 transition-all no-underline"
+            href="#discussion"
+            className="bg-white rounded-xl border border-border p-5 hover:shadow-md hover:border-primary/30 transition-all no-underline block cursor-pointer"
           >
             <span className="text-2xl">{topic.emoji}</span>
             <h3 className="font-semibold mt-2 mb-1 text-text-main">{topic.title}</h3>
             <p className="text-sm text-text-secondary">{topic.desc}</p>
-          </Link>
+          </a>
         ))}
       </div>
 
-      <div className="bg-white rounded-xl border border-border p-6">
+      <div id="discussion" className="bg-white rounded-xl border border-border p-6 scroll-mt-20">
         <h2 className="text-xl font-semibold mb-4">💭 留言讨论</h2>
         <div ref={containerRef} className="min-h-[200px]" />
       </div>

@@ -16,6 +16,10 @@ export default function GuideArticle() {
     const key = `../content/guide/${slug}.md`;
     const loader = mdFiles[key];
 
+    setError(false);
+    setLoading(true);
+    window.scrollTo(0, 0);
+
     if (!loader) {
       setError(true);
       setLoading(false);
@@ -26,6 +30,8 @@ export default function GuideArticle() {
       .then((text) => {
         setContent(text);
         setLoading(false);
+        const heading = text.match(/^# (.+)/m)?.[1] || slug;
+        document.title = `${heading} - 原心咯的英国留学指南`;
       })
       .catch(() => {
         setError(true);

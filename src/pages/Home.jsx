@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const quickLinks = [
   { emoji: '🎓', title: '行前准备', slug: 'pre-departure' },
@@ -17,6 +18,7 @@ const quickLinks = [
 ];
 
 export default function Home() {
+  useEffect(() => { document.title = '原心咯的英国留学指南'; }, []);
   return (
     <div>
       <section className="bg-gradient-to-br from-primary to-primary-light text-white py-16 px-4 text-center">

@@ -5,6 +5,7 @@ import Guide from './pages/Guide';
 import GuideArticle from './pages/GuideArticle';
 import Tools from './pages/Tools';
 import Community from './pages/Community';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="guide/:slug" element={<GuideArticle />} />
         <Route path="tools" element={<Tools />} />
         <Route path="community" element={<Community />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

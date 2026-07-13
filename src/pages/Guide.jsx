@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const articles = [
   {
@@ -12,7 +13,7 @@ const articles = [
     slug: 'visa-guide',
     title: '签证申请指南',
     emoji: '🛂',
-    desc: 'Tier 4 学生签证申请流程、材料准备与面试经验。',
+    desc: 'Student Route 学生签证申请流程、材料准备与面试经验。',
     category: '行前',
   },
   {
@@ -97,6 +98,7 @@ const articles = [
 const categories = [...new Set(articles.map((a) => a.category))];
 
 export default function Guide() {
+  useEffect(() => { document.title = '留学指南 - 原心咯的英国留学指南'; }, []);
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-2">📚 留学指南</h1>

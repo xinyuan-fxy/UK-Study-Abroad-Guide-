@@ -1,6 +1,6 @@
 # 🛂 签证申请指南
 
-> Tier 4（Student Route）签证申请全流程解析。
+> Student Route 学生签证申请全流程解析。
 
 ---
 
